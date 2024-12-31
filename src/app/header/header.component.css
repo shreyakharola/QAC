@@ -1,0 +1,37 @@
+.logo-doic {
+    max-width: 40%;
+}
+
+.logo-custom {
+    max-width: 10%;
+}
+
+.nav{
+    background-color: var(--white-color);
+}
+
+.nav-logo{
+    display: flex;
+    column-gap: 20px;
+}
+
+.user-lang a{
+    color: var(--gold-color);
+    font-size: var(--font-sm);
+}
+.user-lang img{
+    max-width: 15%;
+    justify-items: center;
+}
+
+.user-name{
+    color: var(--variant-grey);
+}
+
+.small-font{
+    font-size: var(--font-validation);
+    color: var(--gold-color);
+}
+
+
+

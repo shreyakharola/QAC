@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --invalid-color: #ff0000;
+    --error-color: #ff5757;
+    --error-bg: #ffe7e6;
+    --theme-color: #8A1538;
+    --light-theme-color: rgba(138, 21, 56, 0.2);
+    --gold-color: #BA915F;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --black-variant: #2D2D2D;
+    --variant-grey: #444444;
+    --light-grey-color: #BCBCBC;
+    --scrollbar-bg: #F5F5F5;
+    --bold-font: 600;
+    --light-bold: 400;
+    --line-height:16px;
+    --font-validation: 0.5rem;
+    --font-sm: 0.8rem;
+    --font-medium: 1.2rem;
+    --font-lg: 1.8rem;
+    --radius-sm: 5px;
+    --radius-lg: 20px;
+    --radius-md: 10px;
+
+}
+
+body{
+    background: url(assets/bg.svg) center repeat;
+    background-color: #f8f8fb !important;
+    overflow-x: hidden;
+    width: 100%;  
+    font-family: "F29LT Bukra Regular"; 
+}
+

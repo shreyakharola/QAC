@@ -1,0 +1,101 @@
+<!-- navbar -->
+<div class="header">
+  <div class="container-fluid">
+    <div class="row d-flex">
+      <div class="col-10 d-flex p-3">
+        <img src="assets/DOIC-logo.svg" alt="" class="logo-doic img-fluid">
+      </div>
+      <div class="col-2 d-flex p-3 justify-content-center">
+        <img src="assets/Qatar-custom-logo.svg" alt="" class="logo-custom img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- login form -->
+<div class="container pt-sm-2">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-10 col-xl-6">
+      <div class="card overflow-hidden py-3 login">
+        <div class="card-body">
+          <div class="row col-9 mx-auto text-center">
+            <h4 class="header text-align-center">
+              A System to manage Agreements, Memorandums of Understanding, and Customs Participation Minutes
+            </h4>
+          </div>
+          <div class="text-color">
+            <p class="mt-3 fs-6 text-center">Please Login</p>
+          </div>
+
+          
+          <div *ngIf="showError"  class="error-box position-fixed">
+            <div class="alert-error d-flex gap-2 p-3">
+            <div>
+              <span><img src="assets/error-cross.svg" alt="" width="30rem"></span>
+            </div>
+            <div class="error-msg col-3">
+            <div class="error-title">
+             Error:
+            </div> 
+            <div class="error-body">
+              {{ errorMessage }}
+            </div>
+            </div>
+            <button type="button" class="cross-btn" (click)="hideErrorBox()">
+              <span>
+              X
+            </span>
+            </button>
+          </div>
+          </div>
+
+
+          <div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal px-5">
+              <div class="form-group mb-2">
+                <div class="input-group d-flex align-items-center">
+                  <span class="input-group-icon p-3">
+                    <img src="assets/username-icon.svg" alt=""/>
+                  </span>
+                  <input type="text" formControlName="username" id="username" class="form-control" placeholder="username" />
+                </div>
+                
+                <!-- <div *ngIf="emailInvalid" class="invalid-feedback">
+                  Please enter a valid username.
+                </div> -->
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-icon p-3">
+                  <img src="assets/password-icon.svg" alt=""/>
+                </span>
+                <input [type]="passwordVisible ? 'text' : 'password'" formControlName="password" id="password" class="form-control" placeholder="password" />
+                <button type="button" class="btn ms-0" (click)="togglePasswordVisibility()">
+                  <img [src]="passwordVisible ? 'assets/ph_eye-slash.svg' : 'assets/ph_eye-slash.svg'" alt=""/>
+                </button>
+              </div>
+              
+              <div *ngIf="passwordInvalid" class="invalid-feedback">
+                Password must be at least 6 characters long.
+              </div>
+
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login mt-4" type="submit">Login</button>
+              </div>
+              <div class="sso-group mt-4">
+                <p class="sso text-center">Login using Single Sign-on (SSO)</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- language button -->
+<div class="mt-3 text-center language mb-5">
+  <button type="button" class="btn btn-primary btn-lang p-2 px-3">العربية
+    &nbsp;
+    <img src="assets/lang.svg" class="ml-2">
+  </button>
+</div>

@@ -1,0 +1,90 @@
+/* side nav-bar */
+.side-nav{
+    background-color: var(--white-color);
+    height: 100vh;
+}
+
+.nav-list img{
+    max-width: 25px;
+}
+
+.nav-link.active {
+    border-right: 2px solid var(--theme-color); 
+  }
+
+.nav-link:focus {
+    border: transparent;
+}
+
+/* cards tasks/ recommendations */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg);
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+  }
+
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color); 
+    border-radius: var(--radius-md);
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color); 
+  }    
+
+
+.card-body{
+  max-height: 250px;
+  background-color: var(--white-color);
+}  
+  
+.card-header {
+    background-color: var(--theme-color);
+    font-size: 20px;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+.angle-icon{
+    width: 15px;
+  }
+  
+.tasks-title{
+  color: var(--gold-color);
+  }
+.cell-width{
+  width: 80%;
+}  
+.table{
+  min-width: 100%;
+  font-weight: 500;
+}  
+
+.task-name{
+  color: var(--black-variant);
+}
+
+.task-progress{
+  font-size: var(--font-sm);
+  padding: 2%;
+  border-radius: var(--radius-sm);
+  min-width: 100px;
+  text-align: center;
+  display: inline-block;
+  background-color: #FFE5BF;
+  color: #FF8C05;
+  font-weight: 500;
+}
+
+.target-date{
+  color: #949494;
+  font-weight: 400;
+}
+
+
+
