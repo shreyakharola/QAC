@@ -6,32 +6,31 @@
     max-width: 10%;
 }
 
-.nav{
+.nav {
     background-color: var(--white-color);
 }
 
-.nav-logo{
+.nav-logo {
     display: flex;
     column-gap: 20px;
 }
 
-.user-lang a{
+
+.user-lang a {
     color: var(--gold-color);
     font-size: var(--font-sm);
 }
-.user-lang img{
+
+.user-lang img {
     max-width: 15%;
     justify-items: center;
 }
 
-.user-name{
+.user-name {
     color: var(--variant-grey);
 }
 
-.small-font{
+.small-font {
     font-size: var(--font-validation);
     color: var(--gold-color);
 }
-
-
-

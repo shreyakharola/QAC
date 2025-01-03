@@ -53,13 +53,12 @@ export class HomeComponent {
         }
       ]
     }
-  
-  ];
 
+  ];
 
   isExpanded: boolean[] = [];
 
-  constructor() {}
+  constructor() { }
 
   toggleAccordion(index: number) {
     this.isExpanded[index] = !this.isExpanded[index];

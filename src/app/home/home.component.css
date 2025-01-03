@@ -1,75 +1,78 @@
 /* side nav-bar */
-.side-nav{
-    background-color: var(--white-color);
-    height: 100vh;
+.side-nav {
+  background-color: var(--white-color);
+  height: 100vh;
 }
 
-.nav-list img{
-    max-width: 25px;
+.nav-list img {
+  max-width: 25px;
 }
 
 .nav-link.active {
-    border-right: 2px solid var(--theme-color); 
-  }
+  border-right: 2px solid var(--theme-color);
+}
 
 .nav-link:focus {
-    border: transparent;
+  border: transparent;
 }
 
 /* cards tasks/ recommendations */
 
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
+  width: 10px;
+}
+
 ::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-bg);
-    border-radius: var(--radius-md);
-    margin-top: 1rem;
-    margin-bottom: 1rem; 
-  }
+  background-color: var(--scrollbar-bg);
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
 ::-webkit-scrollbar-thumb {
-    background: var(--theme-color); 
-    border-radius: var(--radius-md);
-  }
+  background: var(--theme-color);
+  border-radius: var(--radius-md);
+}
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--theme-color); 
-  }    
+  background: var(--theme-color);
+}
 
 
-.card-body{
+.card-body {
   max-height: 250px;
   background-color: var(--white-color);
-}  
-  
+}
+
 .card-header {
-    background-color: var(--theme-color);
-    font-size: 20px;
-    color: var(--white-color);
-    cursor: pointer;
-  }
-.angle-icon{
-    width: 15px;
-  }
-  
-.tasks-title{
+  background-color: var(--theme-color);
+  font-size: 20px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.angle-icon {
+  width: 15px;
+}
+
+.tasks-title {
   color: var(--gold-color);
-  }
-.cell-width{
+}
+
+.cell-width {
   width: 80%;
-}  
-.table{
+}
+
+.table {
   min-width: 100%;
   font-weight: 500;
-}  
+}
 
-.task-name{
+.task-name {
   color: var(--black-variant);
 }
 
-.task-progress{
+.task-progress {
   font-size: var(--font-sm);
   padding: 2%;
   border-radius: var(--radius-sm);
@@ -81,10 +84,7 @@
   font-weight: 500;
 }
 
-.target-date{
+.target-date {
   color: #949494;
   font-weight: 400;
 }
-
-
-

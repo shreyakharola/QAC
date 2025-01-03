@@ -1,76 +1,77 @@
 .logo-doic {
-    max-width: 20%;
+  max-width: 20%;
 }
 
 .logo-custom {
-    max-width: 80px;
+  max-width: 80px;
 }
 
 .login {
-    border-radius: var(--radius-lg);
-    max-width: 630px;
-    border: none;
+  border-radius: var(--radius-lg);
+  max-width: 630px;
+  border: none;
 }
 
 .header {
-    color: var(--theme-color);
-    font-weight: var(--bold-font);
-    font-size: var(--font-medium);
+  color: var(--theme-color);
+  font-weight: var(--bold-font);
+  font-size: var(--font-medium);
 }
 
 .input-group {
-    border-bottom: 1px solid var(--light-grey-color);
+  border-bottom: 1px solid var(--light-grey-color);
 }
 
 input:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .input-group-icon img {
-    max-width: 20px;
-    max-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .form-control {
-    flex: 1;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    font-weight: var(--light-bold);
-    line-height: var(--line-height);
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: var(--light-bold);
+  line-height: var(--line-height);
 }
 
 .form-control::placeholder {
-    color: var(--light-grey-color);
+  color: var(--light-grey-color);
 }
 
 .btn-login {
-    background-color: var(--theme-color);
-    border: none;
+  background-color: var(--theme-color);
+  border: none;
 }
-.btn-login:hover{
-     background-color: #751230;
+
+.btn-login:hover {
+  background-color: #751230;
 }
 
 .sso {
-    color: var(--theme-color);
-    font-weight: var(--light-bold);
+  color: var(--theme-color);
+  font-weight: var(--light-bold);
 }
 
 button:focus {
   border: transparent !important;
 }
 
-.btn-lang{
-    color:var(--theme-color);
-    background: var(--light-theme-color);
-    border: none;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+.btn-lang {
+  color: var(--theme-color);
+  background: var(--light-theme-color);
+  border: none;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.btn-lang:hover{
-    background-color: var(--light-theme-color);
-    color: var(--theme-color);
+.btn-lang:hover {
+  background-color: var(--light-theme-color);
+  color: var(--theme-color);
 }
 
 input.ng-invalid.ng-touched {
@@ -86,47 +87,46 @@ input.ng-invalid.ng-touched {
 
 /* Error box styles */
 .error-box {
-    position:relative ;
-    top: 5%;
-    right: 2%;
-    z-index: 1101; 
-    width: 25rem; 
-  }
-  
-  .text-color{
-    color: var(--black-color);
-  }
+  position: relative;
+  top: 5%;
+  right: 2%;
+  z-index: 1101;
+  width: 25rem;
+}
 
-  .alert-error {
-    background-color: var(--error-bg); 
-    border-left: 6px solid var(--error-color); 
-    color: var(--error-color); 
-    border-radius: 6px;
-    box-shadow: 0 2px 12px var(--black-color);
-    font-size: var(--font-sm);
-    margin-left: 1rem;
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  .error-title{
-    font-weight: var(--bold-font);
-  }
+.text-color {
+  color: var(--black-color);
+}
 
-  .error-msg{
-    margin: 0 0 0 1rem;
-    flex: 1 1 auto;
-  }
+.alert-error {
+  background-color: var(--error-bg);
+  border-left: 6px solid var(--error-color);
+  color: var(--error-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 12px var(--black-color);
+  font-size: var(--font-sm);
+  margin-left: 1rem;
+  opacity: 1;
+  transform: translateY(0px);
+}
 
-  .cross-btn{
-    border: none;
-    display: inline-block;
-    background: none;
-    color: #BF9B6E;
-    font-size: 1.0rem;
-    font-style: normal;
-    text-transform: none;
-    line-height: 1;
-    font-weight: var(--light-bold);
-  }
-  
-  
+.error-title {
+  font-weight: var(--bold-font);
+}
+
+.error-msg {
+  margin: 0 0 0 1rem;
+  flex: 1 1 auto;
+}
+
+.cross-btn {
+  border: none;
+  display: inline-block;
+  background: none;
+  color: #BF9B6E;
+  font-size: 1.0rem;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-weight: var(--light-bold);
+}
