@@ -1,76 +1,74 @@
-<app-header></app-header>  
-  <!-- side navbar (left)-->
-  <div class="main row">
-    <div class="d-flex flex-column flex-shrink-0 side-nav py-4 shadow-lg" style="width: 4.5rem;">
-      <ul class="nav nav-flush nav-list flex-column mb-auto text-center">
-        <li class="nav-item border-right-primary">
-          <a href="#" class="nav-link py-3 active" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-            data-bs-original-title="Customers">
-            <img src="assets/mails.svg" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-            data-bs-original-title="Customers">
-            <img src="assets/building.svg" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-            data-bs-original-title="Customers">
-            <img src="assets/search.svg" alt="logout">
-          </a>
-        </li>
+<app-header></app-header>
+<!-- side navbar (left)-->
+<div class="main row">
+  <div class="d-flex flex-column flex-shrink-0 side-nav py-4 shadow-lg" style="width: 4.5rem;">
+    <ul class="nav nav-flush nav-list flex-column mb-auto text-center">
+      <li class="nav-item border-right-primary">
+        <a href="#" class="nav-link py-3 active" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+          data-bs-original-title="Customers">
+          <img src="assets/mails.svg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+          data-bs-original-title="Customers">
+          <img src="assets/building.svg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+          data-bs-original-title="Customers">
+          <img src="assets/search.svg" alt="logout">
+        </a>
+      </li>
+    </ul>
+  </div>
 
-      </ul>
-    </div>
+  <!-- accordion -->
+  <div class="container col-10 pt-5">
+    <div class="card mb-3" *ngFor="let taskGroup of taskGroups; let i = index">
+      <div class="card-header d-flex justify-content-between p-3" (click)="toggleAccordion(i)">
+        <h6>{{ taskGroup.title }}</h6>
+        <img [src]="isExpanded[i] ? 'assets/angle-up.svg' : 'assets/angle-down.svg'" class="angle-icon"
+          alt="Toggle Icon" />
+      </div>
+      
+      <div class="card-body overflow-auto" *ngIf="isExpanded[i]">
+        <div *ngFor="let subtitle of taskGroup.subtitles" class="mb-3">
+          <table class="table mb-2">
+            <thead>
+              <tr>
+                <th class="tasks-title cell-width"><strong>{{subtitle.name}}</strong></th>
+                <ng-container *ngIf="taskGroup.title !== 'Meetings'">
+                  <th class="tasks-title cell-width" *ngIf="taskGroup.title !== 'Meetings'"><strong>Target Date</strong>
+                  </th>
+                </ng-container>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of subtitle.tasks">
+                <td class="task-name fw-bold">{{ task.name }}</td>
 
-
-    <!-- accordion -->
-    <div class="container col-10 pt-5">
-      <div class="card mb-3" *ngFor="let taskGroup of taskGroups; let i = index">
-        <div class="card-header d-flex justify-content-between p-3" (click)="toggleAccordion(i)">
-          <h6>{{ taskGroup.title }}</h6>
-          <img [src]="isExpanded[i] ? 'assets/angle-up.svg' : 'assets/angle-down.svg'" class="angle-icon"
-            alt="Toggle Icon" />
-        </div>
-        <!-- code to update -->
-        <div class="card-body overflow-auto" *ngIf="isExpanded[i]">
-          <div *ngFor="let subtitle of taskGroup.subtitles" class="mb-3">
-            <table class="table mb-2">
-              <thead>
-                <tr>
-                  <th class="tasks-title cell-width"><strong>{{subtitle.name}}</strong></th>
-                  <ng-container *ngIf="taskGroup.title !== 'Meetings'">
-                    <th  class="tasks-title cell-width" *ngIf="taskGroup.title !== 'Meetings'"><strong>Target Date</strong></th>
+                <td>
+                  <span class="target-date">{{ task.targetDate }}</span>
+                </td>
+                <td>
+                  <ng-container *ngIf="taskGroup.title === 'Meetings'">
+                    <img src="assets/meeting-icon.svg" alt="" width="15" height="15">
                   </ng-container>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let task of subtitle.tasks">
-                  <td class="task-name fw-bold">{{ task.name }}</td>
-
-                  <td>
-                    <span class="target-date">{{ task.targetDate }}</span>
-                  </td>
-                  <td>
-                    <ng-container *ngIf="taskGroup.title === 'Meetings'">
-                      <img src="assets/meeting-icon.svg" alt="" width="15" height="15">
-                    </ng-container>
-                    <ng-container *ngIf="taskGroup.title !== 'Meetings'">
-                      <div class="task-progress">
-                        {{ task.status }}
-                      </div>
-                    </ng-container>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
+                  <ng-container *ngIf="taskGroup.title !== 'Meetings'">
+                    <div class="task-progress">
+                      {{ task.status }}
+                    </div>
+                  </ng-container>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
     </div>
   </div>
+</div>
